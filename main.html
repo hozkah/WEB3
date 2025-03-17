@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Search</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: white;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .navbar .menu {
+        display: flex;
+        gap: 15px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+
+      .navbar .menu a:hover {
+        background: #ddd;
+      }
+
+      .navbar .buttons a {
+        padding: 8px 12px;
+        border: 1px solid black;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .hero-section h1 {
+        font-size: 32px;
+        margin-top: 20px;
+      }
+
+      .hero-section p {
+        color: #777;
+        font-size: 16px;
+      }
+
+      .search-bar {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .search-bar input,
+      .search-bar select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+      }
+
+      .job-listing {
+        background: white;
+        padding: 15px;
+        margin: 20px auto;
+        width: 60%;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      .job-listing h3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .badge {
+        background: blue;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #777;
+      }
+
+      .apply-btn {
+        float: right;
+        padding: 8px 12px;
+        border: 1px solid black;
+        background: white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .pagination {
+        margin-top: 20px;
+      }
+
+      .pagination a {
+        text-decoration: none;
+        padding: 8px 12px;
+        border: 1px solid black;
+        margin: 2px;
+        display: inline-block;
+        border-radius: 4px;
+        color: black;
+      }
+
+      .pagination .active {
+        background: blue;
+        color: white;
+      }
+
+      .footer {
+        margin-top: 30px;
+        padding: 15px;
+        background: white;
+        border-top: 1px solid #ddd;
+      }
+
+      .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar">
+      <div class="logo">JobSearch</div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Pages</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Employers</a>
+      </div>
+      <div class="buttons">
+        <a href="#">POST A JOB</a>
+        <a href="#">LOG IN</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>Finding your Dream Job</h1>
+      <p>
+        Connecting you to over 10,000 job opportunities in and around Kampala.
+      </p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Job title/Company name/Keyword" />
+      <input type="text" placeholder="City/Region/Zip code" />
+      <select>
+        <option>All Categories</option>
+        <option>Technology</option>
+        <option>Healthcare</option>
+        <option>Education</option>
+      </select>
+    </div>
+
+    <!-- Job Listings -->
+    <div class="job-listing">
+      <h3>Web Designer needed <span class="badge">Full Time</span></h3>
+      <p>
+        A web developer is needed urgently with the ability to use React and
+        Node.js. 3 Years of experience. <a href="#">More</a>
+      </p>
+      <div class="location">📍 12 Street Old Kampala, Uganda</div>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <div class="job-listing">
+      <h3>
+        Medical Assistant
+        <span class="badge" style="background: darkblue">Part Time</span>
+      </h3>
+      <p>
+        Has to be a Ugandan with 2 years’ experience in a related field.
+        <a href="#">More</a>
+      </p>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <a href="#">← Older</a>
+      <a href="#">1</a>
+      <a href="#" class="active">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">→ Newer</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        <a href="#"><b>For More Info, Contact Us.</b></a>
+      </p>
+      <div class="footer-icons">
+        <span>🔗</span>
+        <span>✉</span>
+        <span>📷</span>
+        <span>💬</span>
+      </div>
+    </div>
+  </body>
+</html>
