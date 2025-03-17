@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef1f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .signup-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .input-field {
+        display: flex;
+        align-items: center;
+        background: #f7f7f7;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+
+      .input-field .icon {
+        margin-right: 10px;
+        font-size: 16px;
+      }
+
+      .input-field input {
+        border: none;
+        outline: none;
+        background: transparent;
+        flex: 1;
+        font-size: 16px;
+      }
+
+      .signup-btn {
+        background-color: white;
+        border: 1px solid #000;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .signup-btn:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="signup-form">
+        <div class="input-field">
+          <span class="icon">👤</span>
+          <input type="text" placeholder="Username" required />
+        </div>
+        <div class="input-field">
+          <span class="icon">✱</span>
+          <input type="password" placeholder="Password" required />
+        </div>
+        <div class="input-field">
+          <span class="icon">✉</span>
+          <input type="email" placeholder="Email" required />
+        </div>
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+    </div>
+  </body>
+</html>
