@@ -7,7 +7,24 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
+        background-color: black; /* Changed to black */
+        transition: background-color 0.5s; /* Smooth transition for background color */
+      }
+
+      body:hover {
+        background-color: white; /* Transition to white on hover */
+      }
+
+      .navbar {
+        background: black; /* Changed to black */
+        transition: background-color 0.5s; /* Smooth transition for background color */
+      }
+
+      .navbar:hover {
+        background: white; /* Transition to white on hover */
+      }
+
+      body {
         margin: 0;
         padding: 0;
         text-align: center;
@@ -18,7 +35,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px;
-        background: white;
         border-bottom: 1px solid #ddd;
       }
 
@@ -27,16 +43,18 @@
         gap: 15px;
       }
 
-      .navbar a {
+      .navbar .menu a {
         text-decoration: none;
-        color: black;
+        color: black; /* Change text color to black when background is white */
         font-weight: bold;
         padding: 8px 12px;
         border-radius: 4px;
+        background: white; /* Change button background to white when navbar is black */
       }
 
-      .navbar .menu a:hover {
-        background: #ddd;
+      .navbar:hover .menu a {
+        color: white; /* Change text color to white when background is black */
+        background: black; /* Change button background to black when navbar is white */
       }
 
       .navbar .buttons a {
@@ -45,16 +63,34 @@
         border-radius: 4px;
         text-decoration: none;
         font-weight: bold;
+        background: white; /* Change button background to white when navbar is black */
+        color: black; /* Change button text color to black when background is white */
+      }
+
+      .navbar:hover .buttons a {
+        background: black; /* Change button background to black when navbar is white */
+        color: white; /* Change button text color to white when navbar is white */
       }
 
       .hero-section h1 {
         font-size: 32px;
         margin-top: 20px;
+        color: white; /* Default color */
+        transition: color 0.5s; /* Smooth transition for text color */
+      }
+
+      body:hover .hero-section h1 {
+        color: black; /* Change text color to black on light grey background */
       }
 
       .hero-section p {
-        color: #777;
+        color: white; /* Default color */
         font-size: 16px;
+        transition: color 0.5s; /* Smooth transition for text color */
+      }
+
+      body:hover .hero-section p {
+        color: black; /* Change text color to black on light grey background */
       }
 
       .search-bar {
@@ -81,6 +117,7 @@
         border-radius: 8px;
         border: 1px solid #ddd;
         text-align: left;
+        position: relative; /* Added to allow absolute positioning of buttons */
       }
 
       .job-listing h3 {
@@ -89,8 +126,8 @@
       }
 
       .badge {
-        background: blue;
-        color: white;
+        background: black; /* Change badge background to black */
+        color: white; /* Change badge text color to white */
         padding: 5px;
         border-radius: 4px;
         font-size: 12px;
@@ -102,16 +139,19 @@
         gap: 5px;
         margin-top: 10px;
         font-size: 14px;
-        color: #777;
+        color: red; /* Change location text color to red */
       }
 
       .apply-btn {
-        float: right;
         padding: 8px 12px;
         border: 1px solid black;
         background: white;
         border-radius: 4px;
         cursor: pointer;
+        position: absolute; /* Changed to absolute positioning */
+        bottom: 10px; /* Position at the bottom */
+        right: 10px; /* Position at the right */
+        margin: 0; /* Remove margin to avoid centering */
       }
 
       .pagination {
@@ -151,7 +191,8 @@
   <body>
     <!-- Navigation -->
     <div class="navbar">
-      <div class="logo">JobSearch</div>
+      <button class="logo" style="background: white; color: black; border: none; cursor: pointer;">JobSearch</button>
+
       <div class="menu">
         <a href="#">Home</a>
         <a href="#">Pages</a>
@@ -166,7 +207,7 @@
 
     <!-- Hero Section -->
     <div class="hero-section">
-      <h1>Finding your Dream Job</h1>
+      <h1 style="font-family: 'Playfair Display', serif;">Finding your Dream Job</h1>
       <p>
         Connecting you to over 10,000 job opportunities in and around Kampala.
       </p>
@@ -187,19 +228,28 @@
     <!-- Job Listings -->
     <div class="job-listing">
       <h3>Web Designer needed <span class="badge">Full Time</span></h3>
+      <div>
+        <button class="apply-btn">Apply</button>
+      </div>
+
       <p>
         A web developer is needed urgently with the ability to use React and
         Node.js. 3 Years of experience. <a href="#">More</a>
       </p>
-      <div class="location">📍 12 Street Old Kampala, Uganda</div>
+      <div class="location" style="color: red;">📍 12 Street Old Kampala, Uganda</div>
+
       <button class="apply-btn">Apply</button>
     </div>
 
     <div class="job-listing">
       <h3>
         Medical Assistant
-        <span class="badge" style="background: darkblue">Part Time</span>
+        <span class="badge">Part Time</span>
       </h3>
+      <div>
+        <button class="apply-btn">Apply</button>
+      </div>
+
       <p>
         Has to be a Ugandan with 2 years’ experience in a related field.
         <a href="#">More</a>
@@ -209,12 +259,13 @@
 
     <!-- Pagination -->
     <div class="pagination">
-      <a href="#">← Older</a>
-      <a href="#">1</a>
-      <a href="#" class="active">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">→ Newer</a>
+      <a href="#" style="padding: 8px 12px; border: 1px solid black; border-radius: 4px; text-decoration: none; color: black; background: white;">← Older</a>
+      <a href="#" style="padding: 8px 12px; border: 1px solid black; border-radius: 4px; text-decoration: none; color: black; background: white;">1</a>
+      <a href="#" class="active" style="padding: 8px 12px; border: 1px solid black; border-radius: 4px; text-decoration: none; color: black; background: white;">2</a>
+      <a href="#" style="padding: 8px 12px; border: 1px solid black; border-radius: 4px; text-decoration: none; color: black; background: white;">3</a>
+      <a href="#" style="padding: 8px 12px; border: 1px solid black; border-radius: 4px; text-decoration: none; color: black; background: white;">4</a>
+      <a href="#" style="padding: 8px 12px; border: 1px solid black; border-radius: 4px; text-decoration: none; color: black; background: white;">→ Newer</a>
+
     </div>
 
     <!-- Footer -->
