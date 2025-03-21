@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
       body {
         font-family: Arial, sans-serif;
-        background-color: #eef1f5;
+        background-color: #FFFFFF; /* Changed to white */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,7 +18,7 @@
       }
 
       .container {
-        background-color: white;
+        background-color: black; /* Changed to black */
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -31,10 +33,10 @@
       .input-field {
         display: flex;
         align-items: center;
-        background: #f7f7f7;
+        background: #d3d3d3; /* Changed to light grey */
         padding: 10px;
         border-radius: 5px;
-        border: 1px solid #ddd;
+        border: 1px solid #aaa; /* Adjusted border color for better contrast */
       }
 
       .input-field .icon {
@@ -46,22 +48,33 @@
         border: none;
         outline: none;
         background: transparent;
+        color: black; /* Changed text color to black for visibility */
         flex: 1;
         font-size: 16px;
       }
 
       .signup-btn {
+        display: block;
+        width: 100%;
         background-color: white;
         border: 1px solid #000;
-        padding: 10px;
-        font-size: 16px;
+        padding: 8px; /* Decreased padding */
+        font-size: 18px; /* Decreased font size */
+        font-weight: normal; /* Removed bold */
+        font-family: 'Playfair Display', serif; /* Changed font style */
         cursor: pointer;
         border-radius: 5px;
         transition: background 0.3s;
+        margin-top: 5px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        box-sizing: border-box;
       }
 
       .signup-btn:hover {
-        background-color: #ddd;
+        background-color: seagreen; /* Change button color to seagreen on hover */
+        color: white; /* Change text color to white on hover */
       }
     </style>
   </head>
